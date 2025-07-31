@@ -10,7 +10,7 @@ function App() {
     <>
      <div className="app-background">
       <div className="app-container">
-        {/* now this white box will sit dead-center in the yellow */}
+  <HeroSection/>
       </div>
     </div>
      
