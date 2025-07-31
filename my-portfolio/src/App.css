@@ -1,9 +1,41 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* 1) reset & fill the screen */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #f4c430;    /* yellow background on body too */
 }
+
+/* 2) yellow wrapper is the only flex container */
+.app-background {
+  display: flex;
+  justify-content: center; /* center white box horizontally */
+  align-items: center;     /* center white box vertically */
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  /* no extra padding here — we’ll inset the white box with its own margin */
+}
+
+/* 3) white box: plain block with fixed/max-width */
+.app-container {
+  background: #fff;
+  width: 100%;
+  max-width: 1200px;       /* “fixed” width on desktop, fluid on mobile */
+  min-height: 90vh;        /* whatever height you like */
+  
+  /* this margin gives you that yellow “frame” around the box */
+  margin: 2rem;
+
+  padding: 2rem;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+
+  /* REMOVE any display:flex / justify-content / align-items here */
+}
+
 
 .logo {
   height: 6em;
